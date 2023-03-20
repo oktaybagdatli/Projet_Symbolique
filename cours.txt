@@ -1,0 +1,114 @@
+Symbolique:                                                                                             15/03/2023
+
+Quand on rencontre un probleme on fait la graph:
+
+I: initial 
+B: les butsde trouver un chemin plus court
+
+  
+
+
+
+*wait = FILE -> Largeur
+*wait = PILE -> Profondeur
+*wait = priorityQueue -> djikstra
+E = nb des arrets
+Largeur : 
+    wait={I}
+    vu={}
+    while(!wait.empty()):   
+        noeud_courant = wait.pop()
+        vu.append(noeud_courant)
+        L=voisins(noeud_courant)
+        for elem in L:
+            if noeud_courant not in vu:
+                wait.append(elem)
+
+
+
+    Search(t):
+        SDD wait={I}
+        SDD vu={}
+        while wait not empty:
+            n=wait.pop()
+            vu.append(n)
+            for s in t:
+                if s not in vu:
+                    wait.append(s) 
+
+
+
+
+Profondeur:
+    parcours_profondeur(t):
+        Si t est marqué comme vu:
+            stop
+        marquer t comme vu
+        pour chaque successeur b:
+            parcours_profondeur(b)
+
+
+Questions:
+    n noeuds -> complexite pour explorer tout le graphe == O(bn)
+    degre b  -> complexite pour trouver l'etat but ==
+    profondeur d 
+
+
+
+complexite -> temps pour tout explorer
+pire de cas -> temps pour trouver b
+espace -> espace
+
+
+DFS (Profondeur):
+    SDD = Pile
+    complexite = O(n*b) O(E)
+    pire des cas=O(E)
+    espace = O(dmax)->mieux
+
+BFS (Largeur):
+    SDD = File
+    complexite = O(n*b) O(E)
+    pire des cas = O(b^d)->mieux
+    espace = O(E)
+
+djikstra:
+    SDD = priorityQueue
+    complexite = O(n^2) O(E*log(E))
+    pire des cas = ...
+    espace = O(E)
+
+
+depth first iterative depth(dfid):
+pseudo:
+    pour d=1 à dmax(ca peut etre +infini aussi car l'algo va arreter au cas plus proche):
+        v=DFS(limite=d)
+        if v :
+            stop
+    
+
+demo:
+    d0 -> 1noeuds
+    d1 -> b noeuds
+    d2 -> b^2 noeuds
+    .
+    .
+    .
+    dmax -> b^dmax noeuds
+
+Hill Climbing:
+  def hillClimbing():
+    n = I
+    while n!=But:
+
+            trier les s selon une heuristique heuristique #s successeur
+            n=argmin h(s)
+
+            si h(s) n'augmente pas -> stop
+            
+    
+h() => compter les nombres des pieces bien placées (pour la jeu de taquins)
+donc,
+    Memoire O(1)
+    Temps O(n)
+    => bloque dans un mnimum local
