@@ -8,6 +8,8 @@ class Chiffre():
     def __post_init__(self,color,valeur):
         self.color =color
         self.valeur = valeur
+        
+        
     
 @dataclass
 class Tige():
