@@ -44,15 +44,26 @@ class Etat():
         tigeDest = self.getTige(numDestination)
         chiffre = tige.pop()
         tigeDest.ajouterChiffre(chiffre)
+
+
+def afficheEtat(etat):
+    for tige in etat.tiges:
+        print()
+
             
 
 #initialisation 
 tige1 = Tige(
     [Chiffre('j',3),Chiffre('j', 2),Chiffre('j', 1)])
 tige2 = Tige([Chiffre('b',3),Chiffre('b', 2),Chiffre('b', 1)])
-tige3 = Tige()
+tige3 = Tige([Chiffre('r',3),Chiffre('r', 2),Chiffre('r', 1)])
+tiges = [tige1,tige2,tige3]
+etatInitial= Etat(tiges)
+etatBut = Etat([
+    Tige([Chiffre('j',3),Chiffre('j', 2),Chiffre('j', 1)])
+]
+)
 #float('inf') pour definir infini
-def ProfondeurBornee(s):
 
 
 
