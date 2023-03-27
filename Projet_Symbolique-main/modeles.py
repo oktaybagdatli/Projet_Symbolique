@@ -15,6 +15,7 @@ class Tige():
     def ajouterChiffre(self,chiffre):
         if self.capacite != 0:
             self.chiffres.append(chiffre)
+            self.capacite-=1
     
 
         
@@ -41,11 +42,17 @@ class Etat():
     def enleverRemettreChiffre(self,numDepart,numDestination):
         tigeDep = self.getTige(numDepart)
         tigeDest = self.getTige(numDestination)
-        chiffre = tige 
+        chiffre = tige.pop()
+        tigeDest.ajouterChiffre(chiffre)
             
 
-
+#initialisation 
+tige1 = Tige(
+    [Chiffre('j',3),Chiffre('j', 2),Chiffre('j', 1)])
+tige2 = Tige([Chiffre('b',3),Chiffre('b', 2),Chiffre('b', 1)])
+tige3 = Tige()
 #float('inf') pour definir infini
+def ProfondeurBornee(s):
 
 
 
