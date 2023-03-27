@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
         
-@dataclass
+@dataclass(order=True)
 class Chiffre():
     color:str
     valeur:int
@@ -18,11 +18,6 @@ class Tige():
             self.capacite-=1
     
 
-        
-        
-        
-        
-    
 @dataclass 
 class Etat():
     tiges:list[Tige]
@@ -60,9 +55,11 @@ tige3 = Tige([Chiffre('r',3),Chiffre('r', 2),Chiffre('r', 1)])
 tiges = [tige1,tige2,tige3]
 etatInitial= Etat(tiges)
 etatBut = Etat([
-    Tige([Chiffre('j',3),Chiffre('j', 2),Chiffre('j', 1)])
-]
-)
+    Tige([Chiffre('j',3),Chiffre('j', 2),Chiffre('r', 1)]),
+    Tige([Chiffre('b',3),Chiffre('b', 2),Chiffre('r', 1)]),
+    Tige([Chiffre('r',3),Chiffre('b', 2),Chiffre('j', 1)])
+])
+
 #float('inf') pour definir infini
 
 
