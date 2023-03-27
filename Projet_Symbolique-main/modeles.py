@@ -5,9 +5,7 @@ from dataclasses import dataclass
 class Chiffre():
     color:str
     valeur:int
-    def __post_init__(self,color,valeur):
-        self.color =color
-        self.valeur = valeur
+    
     
 @dataclass
 class Tige():
@@ -17,9 +15,6 @@ class Tige():
     def ajouterChiffre(self,chiffre):
         if self.capacite != 0:
             self.chiffres.append(chiffre)
-            
-    def getChiffres(self):
-        return self.chiffres
     
 
         
@@ -46,10 +41,14 @@ class Etat():
     def enleverRemettreChiffre(self,numDepart,numDestination):
         tigeDep = self.getTige(numDepart)
         tigeDest = self.getTige(numDestination)
-        chiffre = tigeDep.getChiffres().pop()
-        tigeDest.ajouterChiffre(chiffre)
-        
+        chiffre = tige 
             
+
+
+#float('inf') pour definir infini
+
+
+
     
     
     

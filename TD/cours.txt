@@ -1,0 +1,30 @@
+parocurs en profondeur: si tu descend tu suit le parcours jusqu'à la etat but
+
+parcours en largeur: on decouvre tous les etats de la'arbre
+
+
+
+
+
+
+taquin:
+    1 ) 
+        Groupe rappele: 
+            inversibilite -> a^-1 o a = Id
+            transposition -> 1234 -> 1324 -> 1342 -> 4312 
+
+
+            1234 -> 1324 -> 1342->1432->4132->4312
+            1234->4231->4132->4312-> 
+
+
+            travelling salesman problem visualization
+
+
+
+            prologin
+            france-ioi
+            hash code/ hcode
+            codingame
+            
+            
